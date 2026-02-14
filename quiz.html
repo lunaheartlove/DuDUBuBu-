@@ -361,11 +361,10 @@
 
         // อิอิ
         const quiz = [
-            { q: "", c: ["", "", "", ""], a: 0 },
-            { q: "", c: ["", "", "", ""], a: 0 },
-            { q: "", c: ["", "", "", ""], a: 0 },
-            { q: "", c: ["", "", "", ""], a: 0 },
-            { q: "", c: ["", "", "", ""], a: 0 },
+            { q: "เราเจอกันครั้งแรกที่ไหน", c: ["เชียงใหม่", "หอลุง", "ห้าง Central", "7/11"], a: 0 },
+            { q: "พี่ชอบอะไรในไม้มากทึ่สุด", c: ["ตา", "ผม", "ปาก", "แก้ม"], a: 0 },
+            { q: "กี่ปีแล้วนะ", c: ["2 ปี", "3 ปี", "4 ปี", "5 ปี"], a: 2 },
+
         ];
 
         let index = 0;
@@ -379,7 +378,7 @@
         function loadQuiz() {
             const q = quiz[index];
             qEl.textContent = q.q;
-            countEl.textContent = `ข้อที่ ${index + 1} / 5`;
+            countEl.textContent = `ข้อที่ ${index + 1} / 3`;
 
             cEl.innerHTML = "";
             nextBtn.classList.add("disabled");
@@ -422,7 +421,7 @@
             document.getElementById("quizCard").style.display = "none";
             document.getElementById("resultCard").style.display = "block";
             document.getElementById("scoreText").textContent =
-                `เธอได้ ${score} / 5 คะแนน`;
+                `เธอได้ ${score} / 3 คะแนน`;
         }
 
         loadQuiz();
